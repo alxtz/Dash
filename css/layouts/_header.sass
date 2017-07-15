@@ -1,49 +1,122 @@
 .header
     background-image: url('../../img/header_bg.png')
-    display: flex
-    justify-content: space-between
-    height: 64px
-    align-items: center
-    .brand
-        background-image: url('../../img/title@3x.png')
-        height: 45px
-        width: 270px
-        background-size: contain
-        background-repeat: no-repeat
-        margin-left: 15px
-    .nav
+    background-repeat: repeat-x
+    background-size: contain
+    .flexWrapper
         display: flex
+        justify-content: space-between
         align-items: center
-        padding-right: 8px
-        .navItem
-            line-height: 16px
-            font-family: 'cwTeXHei'
-            font-family: 'Noto Sans TC'
-            font-weight: 400
-            letter-spacing: 2px
-            color: white
-            font-size: 16px
-            padding-left: 14px
-            padding-right: 14px
-            border-right: 2px solid white
-            text-decoration: none
-        .navItem:first-child
-            border-left: 2px solid white
+        height: 64px
+        .brand
+            background-image: url('../../img/title@3x.png')
+            height: 45px
+            width: 270px
+            background-size: contain
+            background-repeat: no-repeat
+            margin-left: 15px
+        .nav
+            display: flex
+            align-items: center
+            padding-right: 8px
+            .itemList
+            .navItem
+                line-height: 16px
+                font-family: 'cwTeXHei'
+                font-family: 'Noto Sans TC'
+                font-weight: 300
+                letter-spacing: 2px
+                color: white
+                font-size: 16px
+                padding-left: 14px
+                padding-right: 14px
+                border-right: 2px solid white
+                text-decoration: none
+            .navItem:first-child
+                border-left: 2px solid white
+    nav.hideNav
+        display: none
 // 寬度 992px 以下，平板 size
 // @media only screen and (max-width : 992px) and (min-width : 768px)
 @media only screen and (max-width : 992px)
     .header
-        .brand
-        .nav
-            .navItem
-                font-size: 18px
-                line-height: 18px
-                font-weight: 300
-            .navItem:first-child
+        .flexWrapper
+            .brand
+            .nav
+                .navItem
+                    font-size: 18px
+                    line-height: 18px
+                    font-weight: 300
+                .navItem:first-child
 @media only screen and (max-width : 768px)
     .header
-        .brand
-        .nav
-            border: 2px solid cyan
-            .navItem
-            .navItem:first-child
+        .itemList
+        .flexWrapper
+            flex-direction: row-reverse
+            .brand
+                max-width: 82vw
+                margin: 0
+                background-position: center
+            .nav
+                height: 100%
+                width: 18vw
+                max-width: 80px
+                border-right: 1px solid white
+                padding: 0
+                cursor: pointer
+                .navItem
+                    display: none
+                .hamburgerButton
+                    width: 18vw
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    div.stack
+                        margin-bottom: 5px
+                        background-color: white
+                        width: 8vw
+                        height: 3px
+                        max-width: 30px
+                    div.stack:last-child
+                        margin-bottom: 0
+    .header.active
+        background-image: url('../../img/header_bg2.png')
+        .itemList
+            display: none
+            height: 0
+            .navItemWrapper
+                margin-left: 10px
+                margin-right: 10px
+                border-top: 1px solid white
+                display: flex
+                align-items: center
+                justify-content: space-between
+                .navItem
+                    font-size: 23px
+                    padding: 10px 20px
+                    display: block
+                    text-decoration: none
+                    color: white
+                .arrowIcon
+                    margin-right: 4vw
+                    float: right
+                    height: 12px
+                    width: 12px
+                    border-bottom: 3px solid white
+                    border-right: 3px solid white
+                    transform: rotate(-45deg)
+        .flexWrapper
+            flex-direction: row-reverse
+            .brand
+            .nav
+                .hamburgerButton
+                    div.stack
+                        margin: 0
+                        transition: 200ms ease transform
+                    div.stack:nth-child(2)
+                        display: none
+                    div.stack:nth-child(1)
+                        transform: rotate(45deg)
+                        margin-top: 3px
+                    div.stack:nth-child(3)
+                        transform: rotate(-45deg)
+                        margin-top: -3px

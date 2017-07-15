@@ -1,12 +1,17 @@
 .header {
     background-image: url("../../img/header_bg.png");
-    display: flex;
-    justify-content: space-between;
-    height: 64px;
-    align-items: center;
+    background-repeat: repeat-x;
+    background-size: contain;
 }
 
-.header .brand {
+.header .flexWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.header .flexWrapper .brand {
     background-image: url("../../img/title@3x.png");
     height: 45px;
     width: 270px;
@@ -15,17 +20,17 @@
     margin-left: 15px;
 }
 
-.header .nav {
+.header .flexWrapper .nav {
     display: flex;
     align-items: center;
     padding-right: 8px;
 }
 
-.header .nav .navItem {
+.header .flexWrapper .nav .navItem {
     line-height: 16px;
     font-family: 'cwTeXHei';
     font-family: 'Noto Sans TC';
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 2px;
     color: white;
     font-size: 16px;
@@ -35,12 +40,16 @@
     text-decoration: none;
 }
 
-.header .nav .navItem:first-child {
+.header .flexWrapper .nav .navItem:first-child {
     border-left: 2px solid white;
 }
 
+.header nav.hideNav {
+    display: none;
+}
+
 @media only screen and (max-width: 992px) {
-    .header .nav .navItem {
+    .header .flexWrapper .nav .navItem {
         font-size: 18px;
         line-height: 18px;
         font-weight: 300;
@@ -48,7 +57,88 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .header .nav {
-        border: 2px solid cyan;
+    .header .flexWrapper {
+        flex-direction: row-reverse;
+    }
+    .header .flexWrapper .brand {
+        max-width: 82vw;
+        margin: 0;
+        background-position: center;
+    }
+    .header .flexWrapper .nav {
+        height: 100%;
+        width: 18vw;
+        max-width: 80px;
+        border-right: 1px solid white;
+        padding: 0;
+        cursor: pointer;
+    }
+    .header .flexWrapper .nav .navItem {
+        display: none;
+    }
+    .header .flexWrapper .nav .hamburgerButton {
+        width: 18vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .header .flexWrapper .nav .hamburgerButton div.stack {
+        margin-bottom: 5px;
+        background-color: white;
+        width: 8vw;
+        height: 3px;
+        max-width: 30px;
+    }
+    .header .flexWrapper .nav .hamburgerButton div.stack:last-child {
+        margin-bottom: 0;
+    }
+    .header.active {
+        background-image: url("../../img/header_bg2.png");
+    }
+    .header.active .itemList {
+        display: none;
+        height: 0;
+    }
+    .header.active .itemList .navItemWrapper {
+        margin-left: 10px;
+        margin-right: 10px;
+        border-top: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header.active .itemList .navItemWrapper .navItem {
+        font-size: 23px;
+        padding: 10px 20px;
+        display: block;
+        text-decoration: none;
+        color: white;
+    }
+    .header.active .itemList .navItemWrapper .arrowIcon {
+        margin-right: 4vw;
+        float: right;
+        height: 12px;
+        width: 12px;
+        border-bottom: 3px solid white;
+        border-right: 3px solid white;
+        transform: rotate(-45deg);
+    }
+    .header.active .flexWrapper {
+        flex-direction: row-reverse;
+    }
+    .header.active .flexWrapper .nav .hamburgerButton div.stack {
+        margin: 0;
+        transition: 200ms ease transform;
+    }
+    .header.active .flexWrapper .nav .hamburgerButton div.stack:nth-child(2) {
+        display: none;
+    }
+    .header.active .flexWrapper .nav .hamburgerButton div.stack:nth-child(1) {
+        transform: rotate(45deg);
+        margin-top: 3px;
+    }
+    .header.active .flexWrapper .nav .hamburgerButton div.stack:nth-child(3) {
+        transform: rotate(-45deg);
+        margin-top: -3px;
     }
 }

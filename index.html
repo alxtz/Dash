@@ -21,18 +21,43 @@
 
         <header class="header">
 
-            <div class="brand">
+            <div class="flexWrapper">
 
+                <div class="brand">
+
+                </div>
+
+                <nav class="nav">
+                    <a href="#" class="navItem">儀表板</a>
+                    <a href="#" class="navItem">使用說明</a>
+                    <a href="#" class="navItem">使用規範</a>
+                    <a href="#" class="navItem">關於</a>
+                    <div class="hamburgerButton">
+                        <div class="stack"></div>
+                        <div class="stack"></div>
+                        <div class="stack"></div>
+                    </div>
+                </nav>
             </div>
 
-            <nav class="nav">
-                <a href="#" class="navItem">儀表板</a>
-                <a href="#" class="navItem">使用說明</a>
-                <a href="#" class="navItem">使用規範</a>
-                <a href="#" class="navItem">關於</a>
+            <nav class="itemList hideNav">
+                <div class="navItemWrapper">
+                    <a href="#" class="navItem">儀表板</a>
+                    <div class="arrowIcon"></div>
+                </div>
+                <div class="navItemWrapper">
+                    <a href="#" class="navItem">使用說明</a>
+                    <div class="arrowIcon"></div>
+                </div>
+                <div class="navItemWrapper">
+                    <a href="#" class="navItem">使用規範</a>
+                    <div class="arrowIcon"></div>
+                </div>
+                <div class="navItemWrapper">
+                    <a href="#" class="navItem">關於</a>
+                    <div class="arrowIcon"></div>
+                </div>
             </nav>
-
-            <!-- TODO Mobile Hamburger -->
 
         </header>
 
@@ -57,8 +82,8 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-xs-12 date">
-                    <p class="dateNormal"></p>
-                    <p class="dateLunar"></p>
+                    <p class="dateNormal">7月6日 星期四</p>
+                    <p class="dateLunar">丁酉年六月十三日</p>
                 </div>
             </div>
             <div class="row cardWrapper">
@@ -75,6 +100,8 @@
                 </div>
             </div>
         </section>
+
+        <!--
 
         <section class="container dashboards">
             <div class="row dashboardWrapper">
@@ -105,10 +132,22 @@
             <div class="imgWrapper"></div>
             <p class="copyright"></p>
         </footer>
+         -->
 
         <!-- vendor js -->
         <script src="libs/jquery-3.1.1/jquery-3.1.1.min.js"></script>
         <script src="libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            $('.nav').click(()=>{
+                console.log('Clicked!')
+                $('header').toggleClass('active')
+                    if($('header').hasClass('active')){
+                        $('header > .itemList').show()
+                    } else {
+                        $('header > .itemList').hide()
+                    }
+            })
+        </script>
     </body>
 
 </html>

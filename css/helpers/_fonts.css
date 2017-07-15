@@ -7,3 +7,29 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:300');
 
 @import url('http://fonts.googleapis.com/earlyaccess/notosanstc.css');
+
+@font-face {
+    font-family: 'Bangla MN';
+    src: url('fonts/BanglaMN.woff2') format('woff2'), /* Super Modern Browsers */
+         url('fonts/BanglaMN.woff') format('woff'), /* Pretty Modern Browsers */
+         url('fonts/BanglaMN.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('fonts/BanglaMN.svg#BanglaMN') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'bangla_mnbold';
+    src: url('fonts/banglamn-bold-webfont.woff2') format('woff2'),
+         url('fonts/banglamn-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bangla_mnregular';
+    src: url('fonts/banglamn-webfont.woff2') format('woff2'),
+         url('fonts/banglamn-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
