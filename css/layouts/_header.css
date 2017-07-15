@@ -1,0 +1,54 @@
+.header {
+    background-image: url("../../img/header_bg.png");
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.header .brand {
+    background-image: url("../../img/title@3x.png");
+    height: 45px;
+    width: 270px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 15px;
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+    padding-right: 8px;
+}
+
+.header .nav .navItem {
+    line-height: 16px;
+    font-family: 'cwTeXHei';
+    font-family: 'Noto Sans TC';
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: white;
+    font-size: 16px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-right: 2px solid white;
+    text-decoration: none;
+}
+
+.header .nav .navItem:first-child {
+    border-left: 2px solid white;
+}
+
+@media only screen and (max-width: 992px) {
+    .header .nav .navItem {
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 300;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header .nav {
+        border: 2px solid cyan;
+    }
+}

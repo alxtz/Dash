@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>臺南城市儀表板</title>
+
+        <!-- vendor css -->
+        <link rel="stylesheet" href="libs/bootstrap-3.3.7/css/bootstrap.min.css">
+
+        <!-- custom css -->
+        <link rel="stylesheet" href="css/index.css">
+
+    </head>
+
+    <body>
+
+        <header class="header">
+
+            <div class="brand">
+
+            </div>
+
+            <nav class="nav">
+                <a href="#" class="navItem">儀表板</a>
+                <a href="#" class="navItem">使用說明</a>
+                <a href="#" class="navItem">使用規範</a>
+                <a href="#" class="navItem">關於</a>
+            </nav>
+
+            <!-- TODO Mobile Hamburger -->
+
+        </header>
+
+        <section class="container-fluid main">
+            <h1>Tainan City Dashboard</h1>
+            <input type="search" name="none" value="none">
+            <div class="weatherDateWrapper">
+                <div class="col-sm-6 col-xs-12 weather">
+                    <div class="iconWrapper">
+                        <img src="img/weather/icon_weather_02@3x.png.png" alt="weather">
+                    </div>
+                    <span class="degree">28° </span>
+                    <div class="pollutionWrapper">
+                        <div class="wrap">
+                            <span>PM 2.5</span>
+                            <div class="colorDot"></div>
+                        </div>
+                        <div class="wrap">
+                            <span class="zh_tw">紫外線</span>
+                            <div class="colorDot dotGreen"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12 date">
+                    <p class="dateNormal"></p>
+                    <p class="dateLunar"></p>
+                </div>
+            </div>
+            <div class="row cardWrapper">
+                <div class="col-md-3 outerBox">
+                    <div class="innerCard">
+                        <div class="imgWrapper">
+                        </div>
+                        <p class="cardTitle"></p>
+                        <p>
+                            <span class="amount"></span>
+                            <span class="unit"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container dashboards">
+            <div class="row dashboardWrapper">
+                <div class="dashboard col-lg-3 col-md-4 col-sm-6">
+                    <div class="up">
+                        <div class="bg"><img src="#" alt="icon"></div>
+                    </div>
+                    <div class="bot">
+                        <h2 class="title"></h2>
+                        <div class="timestampWrapper"><i class="icon"></i><span></span></div>
+                        <p class="intro"></p>
+                        <div class="loadMore"></div>
+                    </div>
+                </div>
+                <div class="dashboard col-lg-3 col-md-4 col-sm-6 addDashboard">
+                    <div class="addButton"></div>
+                    <h2 class="title"></h2>
+                    <p class="intro"></p>
+                    <div class="provideButton">
+                        <span></span><i></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <nav></nav>
+            <div class="imgWrapper"></div>
+            <p class="copyright"></p>
+        </footer>
+
+        <!-- vendor js -->
+        <script src="libs/jquery-3.1.1/jquery-3.1.1.min.js"></script>
+        <script src="libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
