@@ -1,14 +1,17 @@
+@charset "UTF-8";
 .header {
     background-image: url("../../img/header_bg.png");
     background-repeat: repeat-x;
     background-size: contain;
+    position: relative;
+    z-index: 20;
 }
 
 .header .flexWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 64px;
+    height: 63px;
 }
 
 .header .flexWrapper .brand {
@@ -23,19 +26,18 @@
 .header .flexWrapper .nav {
     display: flex;
     align-items: center;
-    padding-right: 8px;
+    padding-right: 9px;
 }
 
 .header .flexWrapper .nav .navItem {
-    line-height: 16px;
-    font-family: 'cwTeXHei';
-    font-family: 'Noto Sans TC';
-    font-weight: 300;
-    letter-spacing: 2px;
+    line-height: 15px;
+    font-family: 'Noto Sans TC','cwTeXHei','微軟正黑體';
+    font-weight: 100;
+    letter-spacing: 1.5px;
     color: white;
     font-size: 16px;
     padding-left: 14px;
-    padding-right: 14px;
+    padding-right: 13px;
     border-right: 2px solid white;
     text-decoration: none;
 }
@@ -97,7 +99,6 @@
     }
     .header.active .itemList {
         display: none;
-        height: 0;
     }
     .header.active .itemList .navItemWrapper {
         margin-left: 10px;
@@ -109,6 +110,7 @@
     }
     .header.active .itemList .navItemWrapper .navItem {
         font-size: 23px;
+        line-height: 32px;
         padding: 10px 20px;
         display: block;
         text-decoration: none;
@@ -121,6 +123,8 @@
         width: 12px;
         border-bottom: 3px solid white;
         border-right: 3px solid white;
+        -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
     }
     .header.active .flexWrapper {
@@ -128,16 +132,22 @@
     }
     .header.active .flexWrapper .nav .hamburgerButton div.stack {
         margin: 0;
+        -ms-transition: 200ms ease -ms-transform;
+        -webkit-transition: 200ms ease -webkit-transform;
         transition: 200ms ease transform;
     }
     .header.active .flexWrapper .nav .hamburgerButton div.stack:nth-child(2) {
         display: none;
     }
     .header.active .flexWrapper .nav .hamburgerButton div.stack:nth-child(1) {
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
         margin-top: 3px;
     }
     .header.active .flexWrapper .nav .hamburgerButton div.stack:nth-child(3) {
+        -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
         margin-top: -3px;
     }

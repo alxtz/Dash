@@ -1,18 +1,25 @@
 @charset "UTF-8";
+section.main.active {
+    margin-top: -212px;
+}
+
 section.main {
     background-image: url("../../img/image_kv.png");
-    height: 1700px;
+    height: auto;
     background-size: 120vw;
     background-repeat: no-repeat;
     background-position: -100px -90px;
     padding-left: 50px;
     padding-right: 50px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    position: relative;
+    z-index: 10;
 }
 
 section.main h1 {
-    margin-top: 38px;
+    margin-top: 29px;
     color: #E2545E;
-    font-family: 'bangla_mnbold';
+    font-family: 'bangla_mnregular';
     font-weight: 100;
     font-size: 42px;
     text-align: center;
@@ -24,8 +31,13 @@ section.main input {
     display: none;
 }
 
+section.main .weatherDateWrapper {
+    margin-top: 13px;
+    width: 100%;
+    height: 65px;
+}
+
 section.main .weatherDateWrapper .weather {
-    border: 2px solid cyan;
     padding: 0;
     display: flex;
     align-items: flex-end;
@@ -46,7 +58,7 @@ section.main .weatherDateWrapper .weather .degree {
     font-size: 47px;
     line-height: 45px;
     font-family: 'Assistant';
-    font-weight: 300;
+    font-weight: 200;
     letter-spacing: 1px;
     margin-right: 7px;
 }
@@ -57,6 +69,7 @@ section.main .weatherDateWrapper .weather .pollutionWrapper {
     flex-direction: column;
     justify-content: space-between;
     height: 48px;
+    width: 100px;
 }
 
 section.main .weatherDateWrapper .weather .pollutionWrapper div.wrap {
@@ -64,6 +77,7 @@ section.main .weatherDateWrapper .weather .pollutionWrapper div.wrap {
     align-items: center;
     padding: 0px;
     padding-left: 15px;
+    justify-content: space-between;
 }
 
 section.main .weatherDateWrapper .weather .pollutionWrapper div.wrap span {
@@ -77,7 +91,7 @@ section.main .weatherDateWrapper .weather .pollutionWrapper div.wrap span {
 }
 
 section.main .weatherDateWrapper .weather .pollutionWrapper div.wrap span.zh_tw {
-    font-family: 'Noto Sans TC';
+    font-family: 'Noto Sans TC', '微軟正黑體';
     font-weight: 100;
     letter-spacing: 2px;
 }
@@ -96,20 +110,33 @@ section.main .weatherDateWrapper .weather .pollutionWrapper div.wrap .dotGreen {
 section.main .weatherDateWrapper .date {
     text-align: right;
     padding: 0;
-    border: 2px solid cyan;
     height: 65px;
 }
 
-section.main .weatherDateWrapper .date .dateNormal {
+section.main .weatherDateWrapper .date .dateWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+section.main .weatherDateWrapper .date .dateWrapper .dateNormal {
     font-family: 'Noto Sans TC';
     font-weight: 300;
     color: white;
     font-size: 30px;
     margin: 0;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
-section.main .weatherDateWrapper .date .dateLunar {
+section.main .weatherDateWrapper .date .dateWrapper .dateNormal span.dateNum {
+    font-family: Montserrat;
+    font-weight: 200;
+}
+
+section.main .weatherDateWrapper .date .dateWrapper .dateLunar {
+    font-family: 'Noto Sans TC';
+    font-weight: 200;
+    line-height: 12px;
     color: white;
     margin: 0;
     font-size: 16px;
@@ -117,24 +144,243 @@ section.main .weatherDateWrapper .date .dateLunar {
 
 section.main .cardWrapper {
     margin: 0;
+    margin-top: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+section.main .cardWrapper .outerBox {
+    padding: 10px;
+}
+
+section.main .cardWrapper .outerBox .innerCard {
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 12px;
+    border-bottom: 3px solid white;
+}
+
+section.main .cardWrapper .outerBox .innerCard .imgWrapper {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+}
+
+section.main .cardWrapper .outerBox .innerCard .imgWrapper img {
+    height: 100%;
+}
+
+section.main .cardWrapper .outerBox .innerCard .cardTitle {
+    padding-left: 11px;
+    color: white;
+    font-family: 'Noto Sans TC','cwTeXHei','微軟正黑體';
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding-top: 10px;
+    margin-bottom: 0;
+}
+
+section.main .cardWrapper .outerBox .innerCard p {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: flex-end;
+}
+
+section.main .cardWrapper .outerBox .innerCard p span.amount {
+    color: #E2545E;
+    font-family: 'Reem Kufi';
+    font-size: 44px;
+    line-height: 42px;
+    padding-left: 10px;
+    letter-spacing: 3px;
+}
+
+section.main .cardWrapper .outerBox .innerCard p span.unit {
+    color: white;
+    font-family: 'Noto Sans TC','cwTeXHei','微軟正黑體';
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+section.main .closeWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -25px;
+}
+
+section.main .closeWrapper p {
+    color: #E2545E;
+    font-family: 'Noto Sans TC','cwTeXHei','微軟正黑體';
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+section.main .closeWrapper .imgWrapper {
+    height: 55px;
+}
+
+section.main .closeWrapper .imgWrapper img {
+    height: 100%;
 }
 
 @media only screen and (max-width: 992px) {
     section.main {
         background-size: 1500px;
+        padding-left: 2vw;
+        padding-right: 2vw;
     }
     section.main h1 {
-        font-size: 75px;
+        font-size: 6.5vw;
     }
     section.main .weatherDateWrapper {
-        transform: scale(1.175);
+        height: 65px;
+    }
+    section.main .weatherDateWrapper .weather {
+        padding: 0;
+        padding-bottom: 5px;
+    }
+    section.main .weatherDateWrapper .date {
+        padding: 0;
+    }
+    section.main .cardWrapper .outerBox .innerCard p span.amount {
+        line-height: 45px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    section.main {
+        background-size: 4500px;
+        background-position: -1100px -90px;
+    }
+    section.main h1 {
+        font-size: 6.5vw;
+    }
+    section.main h1 span.title1 {
+        margin-top: 6vw;
+        display: block;
+        font-size: 13vw;
+    }
+    section.main h1 span.title2 {
+        margin-top: 2vw;
+        display: block;
+        font-size: 13vw;
+    }
+    section.main .weatherDateWrapper {
+        height: 50vw;
     }
     section.main .weatherDateWrapper .weather {
         padding: 0;
         justify-content: center;
+        padding-bottom: 5px;
+        height: auto;
+    }
+    section.main .weatherDateWrapper .weather .iconWrapper {
+        height: 19vw;
+        margin-right: 2vw;
+    }
+    section.main .weatherDateWrapper .weather .iconWrapper img {
+        height: 100%;
+    }
+    section.main .weatherDateWrapper .weather .degree {
+        color: white;
+        font-size: 15vw;
+        line-height: 12vw;
+        font-family: 'Assistant';
+        font-weight: 200;
+        letter-spacing: 1px;
+        margin-right: 2vw;
+    }
+    section.main .weatherDateWrapper .weather .pollutionWrapper {
+        border-left: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 13.5vw;
+        width: auto;
+    }
+    section.main .weatherDateWrapper .weather .pollutionWrapper div.wrap {
+        display: flex;
+        align-items: center;
+        padding: 0px;
+        padding-left: 5vw;
+        justify-content: space-between;
+    }
+    section.main .weatherDateWrapper .weather .pollutionWrapper div.wrap span {
+        color: white;
+        font-family: 'Ubuntu';
+        font-weight: 100;
+        font-size: 6vw;
+        line-height: 6vw;
+        padding-right: 12px;
+        letter-spacing: 0.25vw;
+    }
+    section.main .weatherDateWrapper .weather .pollutionWrapper div.wrap span.zh_tw {
+        font-family: 'Noto Sans TC', '微軟正黑體';
+        font-weight: 100;
+        letter-spacing: 0.75vw;
+    }
+    section.main .weatherDateWrapper .weather .pollutionWrapper div.wrap .colorDot {
+        height: 5.3vw;
+        width: 5.3vw;
+        border-radius: 10vw;
+        background-color: yellow;
+    }
+    section.main .weatherDateWrapper .weather .pollutionWrapper div.wrap .dotGreen {
+        background-color: #64f247;
     }
     section.main .weatherDateWrapper .date {
         padding: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 5vw;
+    }
+    section.main .weatherDateWrapper .date .dateWrapper {
+        display: inline-block;
+    }
+    section.main .weatherDateWrapper .date .dateWrapper .dateNormal {
+        font-family: 'Noto Sans TC';
+        font-weight: 300;
+        color: white;
+        font-size: 9.5vw;
+        margin: 0;
+        letter-spacing: 2px;
+    }
+    section.main .weatherDateWrapper .date .dateWrapper .dateNormal span.dateNum {
+        font-family: Montserrat;
+        font-weight: 200;
+    }
+    section.main .weatherDateWrapper .date .dateWrapper .dateLunar {
+        font-size: 4.9vw;
+    }
+    section.main .cardWrapper {
+        margin: 0;
+    }
+    section.main .cardWrapper .outerBox {
+        padding: 2.5vw;
+    }
+    section.main .cardWrapper .outerBox .innerCard {
+        padding-top: 5vw;
+    }
+    section.main .cardWrapper .outerBox .innerCard .imgWrapper {
+        height: 10vw;
+    }
+    section.main .cardWrapper .outerBox .innerCard .cardTitle {
+        font-size: 5vw;
+    }
+    section.main .cardWrapper .outerBox .innerCard p span.amount {
+        line-height: 14vw;
+        font-size: 12vw;
+        letter-spacing: 1px;
+        padding-right: 2vw;
+        padding-left: 2vw;
+    }
+    section.main .cardWrapper .outerBox .innerCard p span.unit {
+        font-size: 5vw;
     }
 }
 

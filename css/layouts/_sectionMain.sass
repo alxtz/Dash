@@ -1,15 +1,20 @@
+section.main.active
+    margin-top: -212px
 section.main
     background-image: url('../../img/image_kv.png')
-    height: 1700px
+    height: auto
     background-size: 120vw
     background-repeat: no-repeat
     background-position: -100px -90px
     padding-left: 50px
     padding-right: 50px
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
+    position: relative
+    z-index: 10
     h1
-        margin-top: 38px
+        margin-top: 29px
         color: #E2545E
-        font-family: 'bangla_mnbold'
+        font-family: 'bangla_mnregular'
         font-weight: 100
         font-size: 42px
         text-align: center
@@ -18,8 +23,11 @@ section.main
     input
         display: none
     .weatherDateWrapper
+        margin-top: 13px
+        width: 100%
+        height: 65px
         .weather
-            border: 2px solid cyan
+            // border-bottom: 2px solid white
             padding: 0
             display: flex
             align-items: flex-end
@@ -34,7 +42,7 @@ section.main
                 font-size: 47px
                 line-height: 45px
                 font-family: 'Assistant'
-                font-weight: 300
+                font-weight: 200
                 letter-spacing: 1px
                 margin-right: 7px
             .pollutionWrapper
@@ -43,11 +51,13 @@ section.main
                 flex-direction: column
                 justify-content: space-between
                 height: 48px
+                width: 100px
                 div.wrap
                     display: flex
                     align-items: center
                     padding: 0px
                     padding-left: 15px
+                    justify-content: space-between
                     span
                         color: white
                         font-family: 'Ubuntu'
@@ -57,7 +67,8 @@ section.main
                         padding-right: 12px
                         letter-spacing: 1px
                     span.zh_tw
-                        font-family: 'Noto Sans TC'
+                        font-family: 'Noto Sans TC', '微軟正黑體'
+                        // font-family: 'Heiti TC', 'Noto Sans TC', '微軟正黑體'
                         font-weight: 100
                         letter-spacing: 2px
                     .colorDot
@@ -70,39 +81,220 @@ section.main
         .date
             text-align: right
             padding: 0
-            border: 2px solid cyan
             height: 65px
-            .dateNormal
-                font-family: 'Noto Sans TC'
-                font-weight: 300
-                color: white
-                font-size: 30px
-                margin: 0
-                letter-spacing: 1px
-            .dateLunar
-                color: white
-                margin: 0
-                font-size: 16px
+            // border-bottom: 2px solid white
+            .dateWrapper
+                display: flex
+                flex-direction: column
+                justify-content: flex-end
+                .dateNormal
+                    font-family: 'Noto Sans TC'
+                    font-weight: 300
+                    color: white
+                    font-size: 30px
+                    margin: 0
+                    letter-spacing: 2px
+                    span.dateNum
+                        font-family: Montserrat
+                        font-weight: 200
+                .dateLunar
+                    font-family: 'Noto Sans TC'
+                    font-weight: 200
+                    line-height: 12px
+                    color: white
+                    margin: 0
+                    font-size: 16px
     .cardWrapper
         margin: 0
+        margin-top: 10px
+        margin-left: -10px
+        margin-right: -10px
         .outerBox
+            padding: 10px
             .innerCard
+                height: auto
+                background-color: rgba(0,0,0,0.5)
+                padding-top: 12px
+                border-bottom: 3px solid white
+                .imgWrapper
+                    display: flex
+                    justify-content: center
+                    height: 40px
+                    img
+                        height: 100%
+                .cardTitle
+                    padding-left: 11px
+                    color: white
+                    font-family: 'Noto Sans TC','cwTeXHei','微軟正黑體'
+                    font-weight: 300
+                    font-size: 16px
+                    letter-spacing: 1px
+                    padding-top: 10px
+                    margin-bottom: 0
+                p
+                    // border: 1px solid red
+                    margin-bottom: 5px
+                    display: flex
+                    align-items: flex-end
+                    span.amount
+                        color: #E2545E
+                        font-family: 'Reem Kufi'
+                        font-size: 44px
+                        line-height: 42px
+                        padding-left: 10px
+                        letter-spacing: 3px
+                    span.unit
+                        color: white
+                        font-family: 'Noto Sans TC','cwTeXHei','微軟正黑體'
+                        font-weight: 300
+                        font-size: 16px
+                        letter-spacing: 1px
+    .closeWrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: -25px
+        p
+            color: #E2545E
+            font-family: 'Noto Sans TC','cwTeXHei','微軟正黑體'
+            font-size: 15px
+            font-weight: 300
+            letter-spacing: 2px
+            margin-bottom: 5px
+        .imgWrapper
+            height: 55px
+            img
+                height: 100%
+
 @media only screen and (max-width : 992px)
     section.main
         background-size: 1500px
+        padding-left: 2vw
+        padding-right: 2vw
         h1
-            font-size: 75px
+            font-size: 6.5vw
         input
         .weatherDateWrapper
-            transform: scale(1.175)
+            height: 65px
             .weather
                 padding: 0
-                justify-content: center
+                // justify-content: center
+                padding-bottom: 5px
             .date
                 padding: 0
         .cardWrapper
             .outerBox
                 .innerCard
+                    p
+                        span.amount
+                            line-height: 45px
+                        span.unit
+@media only screen and (max-width : 768px)
+    section.main
+        background-size: 4500px
+        background-position: -1100px -90px
+        h1
+            font-size: 6.5vw
+            span.title1
+                margin-top: 6vw
+                display: block
+                font-size: 13vw
+            span.title2
+                margin-top: 2vw
+                display: block
+                font-size: 13vw
+        input
+        .weatherDateWrapper
+            height: 50vw
+            .weather
+                padding: 0
+                justify-content: center
+                padding-bottom: 5px
+                height: auto
+                .iconWrapper
+                    height: 19vw
+                    margin-right: 2vw
+                    img
+                        height: 100%
+                .degree
+                    color: white
+                    font-size: 15vw
+                    line-height: 12vw
+                    font-family: 'Assistant'
+                    font-weight: 200
+                    letter-spacing: 1px
+                    margin-right: 2vw
+                .pollutionWrapper
+                    border-left: 1px solid white
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    height: 13.5vw
+                    width: auto
+                    div.wrap
+                        display: flex
+                        align-items: center
+                        padding: 0px
+                        padding-left: 5vw
+                        justify-content: space-between
+                        span
+                            color: white
+                            font-family: 'Ubuntu'
+                            font-weight: 100
+                            font-size: 6vw
+                            line-height: 6vw
+                            padding-right: 12px
+                            letter-spacing: 0.25vw
+                        span.zh_tw
+                            font-family: 'Noto Sans TC', '微軟正黑體'
+                            // font-family: 'Heiti TC', 'Noto Sans TC', '微軟正黑體'
+                            font-weight: 100
+                            letter-spacing: 0.75vw
+                        .colorDot
+                            height: 5.3vw
+                            width: 5.3vw
+                            border-radius: 10vw
+                            background-color: yellow
+                        .dotGreen
+                            background-color: rgb(100, 242, 71)
+            .date
+                padding: 0
+                display: flex
+                justify-content: center
+                margin-top: 5vw
+                .dateWrapper
+                    display: inline-block
+                    .dateNormal
+                        font-family: 'Noto Sans TC'
+                        font-weight: 300
+                        color: white
+                        font-size: 9.5vw
+                        margin: 0
+                        letter-spacing: 2px
+                        span.dateNum
+                            font-family: Montserrat
+                            font-weight: 200
+                    .dateLunar
+                        font-size: 4.9vw
+        .cardWrapper
+            margin: 0
+            .outerBox
+                padding: 2.5vw
+                .innerCard
+                    padding-top: 5vw
+                    .imgWrapper
+                        height: 10vw
+                    .cardTitle
+                        font-size: 5vw
+                    p
+                        span.amount
+                            line-height: 14vw
+                            font-size: 12vw
+                            letter-spacing: 1px
+                            padding-right: 2vw
+                            padding-left: 2vw
+                        span.unit
+                            font-size: 5vw
 
 /* Custom, iPhone Retina */
 /* 至少 320px 時，也就是大於 320px */
