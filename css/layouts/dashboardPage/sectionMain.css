@@ -1,0 +1,194 @@
+@charset "UTF-8";
+section.main.active {
+    margin-top: -212px;
+}
+
+section.main {
+    background-image: url("../../../img/image_kv.png");
+    height: auto;
+    background-size: 140vw;
+    background-repeat: no-repeat;
+    background-position: -100px -90px;
+    padding-left: 57px;
+    padding-right: 57px;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    position: relative;
+    z-index: 10;
+}
+
+section.main .pathWrapper {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-left: -57px;
+    margin-right: -57px;
+    display: flex;
+    align-items: center;
+    padding: 12px 57px;
+}
+
+section.main .pathWrapper img {
+    height: 15px;
+    margin-bottom: 2px;
+    margin-right: 5px;
+}
+
+section.main .pathWrapper span {
+    letter-spacing: 2px;
+    font-family: 'Noto Sans TC', '微軟正黑體';
+    font-weight: 200;
+    color: #E2545E;
+    font-size: 14px;
+}
+
+section.main .textContentWrapper h1 {
+    font-family: 'Noto Sans TC', '微軟正黑體';
+    color: white;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 35px;
+    border-left: 5px solid #e2545e;
+    letter-spacing: 2px;
+    margin-top: 18px;
+    padding-left: 10px;
+    padding-bottom: 6px;
+}
+
+section.main .dataInfo {
+    margin-bottom: 8px;
+}
+
+section.main .dataInfo .dataSource {
+    font-size: 17px;
+    font-family: 'Noto Sans TC', '微軟正黑體';
+    color: #E2545E;
+    font-weight: 200;
+    letter-spacing: 1px;
+    margin-right: 12px;
+}
+
+section.main .dataInfo .dataSource i {
+    padding-right: 5px;
+}
+
+section.main .dataInfo .dataDate {
+    font-size: 17px;
+    font-family: 'Noto Sans TC', '微軟正黑體';
+    color: #E2545E;
+    font-weight: 200;
+}
+
+section.main .dataInfo .dataDate i {
+    padding-right: 5px;
+}
+
+section.main .dataIntro {
+    color: #e2dbdb;
+    font-family: 'Noto Sans TC', '微軟正黑體';
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 14.5px;
+    margin-bottom: 20px;
+}
+
+section.main .dataIntro p {
+    margin-bottom: 3px;
+}
+
+section.main .graphWrapper {
+    padding-bottom: 40px;
+}
+
+section.main .graphWrapper img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 991px) {
+    section.main {
+        padding-left: 3vw;
+        padding-right: 3vw;
+        background-size: 3000px;
+    }
+    section.main .pathWrapper {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-left: -3vw;
+        margin-right: -3vw;
+        padding: 12px 3vw;
+    }
+    section.main .pathWrapper img {
+        height: 20px;
+        margin-right: 10px;
+    }
+    section.main .pathWrapper span {
+        font-size: 18px;
+    }
+    section.main .textContentWrapper h1 {
+        font-size: 4.5vw;
+        line-height: 5vw;
+    }
+    section.main .dataInfo .dataSource {
+        font-size: 2vw;
+    }
+    section.main .dataInfo .dataDate {
+        font-size: 2vw;
+    }
+    section.main .dataIntro {
+        font-size: 1.5vw;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    section.main {
+        padding-left: 4vw;
+        padding-right: 4vw;
+        background-size: 3000px;
+    }
+    section.main .pathWrapper {
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        margin-left: -4vw;
+        margin-right: -4vw;
+        padding-left: 4vw;
+    }
+    section.main .pathWrapper img {
+        height: 4.5vw;
+        margin-right: 10px;
+        margin-bottom: 1px;
+    }
+    section.main .pathWrapper span {
+        font-size: 4vw;
+        font-weight: 400;
+    }
+    section.main .textContentWrapper h1 {
+        font-size: 6.5vw;
+        line-height: 7.5vw;
+        padding-bottom: 0.5vw;
+    }
+    section.main .dataInfo {
+        padding-bottom: 1vw;
+    }
+    section.main .dataInfo .dataSource {
+        font-size: 4vw;
+        display: block;
+        font-weight: 400;
+        margin-bottom: 0.5vw;
+    }
+    section.main .dataInfo .dataDate {
+        font-size: 4vw;
+        display: block;
+        font-weight: 400;
+    }
+    section.main .dataIntro {
+        font-size: 3.5vw;
+        font-weight: 400;
+    }
+    section.main .dataIntro p {
+        padding-bottom: 1.5vw;
+    }
+}
+
+/* Custom, iPhone Retina */
+/* 至少 320px 時，也就是大於 320px */
+/* Extra Small Devices, Phones */
+/* Small Devices, Tablets */
+/* Medium Devices, Desktops */
+/* Large Devices, Wide Screens */

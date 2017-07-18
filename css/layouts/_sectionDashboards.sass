@@ -14,6 +14,7 @@ section.dashboards
     .dashboardWrapper
         .dashboard
             padding: 11px
+            text-decoration: none
             .contentWrapper
                 box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
                 .up
@@ -30,6 +31,8 @@ section.dashboards
                 .bot
                     border: 1px solid white
                     background-color: white
+                    height: 180px
+                    position: relative
                     .title
                         font-family: 'Noto Sans TC','cwTeXHei','微軟正黑體'
                         font-weight: 400
@@ -63,6 +66,9 @@ section.dashboards
                         display: flex
                         margin: 17px
                         justify-content: flex-end
+                        position: absolute
+                        bottom: 0px
+                        right: 0px
                         .dot
                             margin-left: 3px
                             border-radius: 100%
@@ -101,6 +107,7 @@ section.dashboards
                     .bot
                         border: 1px solid white
                         background-color: white
+                        height: 260px
                         .title
                             font-family: 'Noto Sans TC','cwTeXHei','微軟正黑體'
                             font-weight: 400
@@ -141,7 +148,7 @@ section.dashboards
                                 background-color: #e2545e
                                 width: 7px
                                 height: 7px
-@media only screen and (max-width : 768px)
+@media only screen and (max-width : 767px)
     section.dashboards
         background: linear-gradient(#3a3a3b,#4E4E4E)
         padding-left: 4.7vw
@@ -183,6 +190,8 @@ section.dashboards
                     .bot
                         border: 1px solid white
                         background-color: white
+                        height: auto
+                        padding-bottom: 35px
                         .title
                             font-family: 'Noto Sans TC','cwTeXHei','微軟正黑體'
                             font-weight: 500

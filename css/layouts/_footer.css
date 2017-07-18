@@ -15,7 +15,7 @@ footer nav {
 footer nav a.infoLink {
     font-weight: 400;
     display: block;
-    color: #b1b1b1;
+    color: #c7c7c7;
     text-decoration: none;
     font-family: 'Noto Sans TC','cwTeXHei','微軟正黑體';
     letter-spacing: 1px;
@@ -41,7 +41,7 @@ footer .imgWrapper img {
 
 footer .copyright {
     text-align: center;
-    color: #b1b1b1;
+    color: #c7c7c7;
     font-family: Arial;
     font-weight: 100;
     font-size: 11px;
@@ -63,7 +63,7 @@ footer .copyright {
     footer nav a.infoLink {
         font-weight: 400;
         display: block;
-        color: #b1b1b1;
+        color: #c7c4c4;
         text-decoration: none;
         font-family: 'Noto Sans TC','cwTeXHei','微軟正黑體';
         letter-spacing: 1px;
@@ -85,7 +85,7 @@ footer .copyright {
     }
     footer .copyright {
         text-align: center;
-        color: #b1b1b1;
+        color: #c7c7c7;
         font-family: Arial;
         font-weight: 100;
         font-size: 1.5vw;
@@ -110,7 +110,7 @@ footer .copyright {
     footer nav a.infoLink {
         font-weight: 300;
         display: block;
-        color: #b1b1b1;
+        color: #c7c7c7;
         text-decoration: none;
         font-family: 'Noto Sans TC','cwTeXHei','微軟正黑體';
         letter-spacing: 2px;
@@ -138,7 +138,7 @@ footer .copyright {
         padding-right: 20vw;
         padding-left: 6vw;
         text-align: center;
-        color: #b1b1b1;
+        color: #c7c7c7;
         font-family: Arial;
         font-weight: 100;
         font-size: 2.9vw;

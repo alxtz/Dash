@@ -1,8 +1,0 @@
-/*helpers*/
-@import "/css/helpers/_fonts.css";
-
-/*layouts*/
-@import "/css/layouts/_header.css";
-@import "/css/layouts/_sectionMain.css";
-@import "/css/layouts/_sectionDashboards.css";
-@import "/css/layouts/_footer.css";

@@ -1,0 +1,168 @@
+$pagePadding: 57px
+$pagePadding992: 3vw
+$pagePadding768: 4vw
+
+section.main.active
+    margin-top: -212px
+section.main
+    background-image: url('../../../img/image_kv.png')
+    height: auto
+    background-size: 140vw
+    background-repeat: no-repeat
+    background-position: -100px -90px
+    padding-left: $pagePadding
+    padding-right: $pagePadding
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
+    position: relative
+    z-index: 10
+    .pathWrapper
+        background-color: rgba(0,0,0,0.3)
+        margin-left: -$pagePadding
+        margin-right: -$pagePadding
+        display: flex
+        align-items: center
+        padding: 12px $pagePadding
+        img
+            height: 15px
+            margin-bottom: 2px
+            margin-right: 5px
+        span
+            letter-spacing: 2px
+            font-family: 'Noto Sans TC', '微軟正黑體'
+            font-weight: 200
+            color: #E2545E
+            font-size: 14px
+    .textContentWrapper
+        h1
+            font-family: 'Noto Sans TC', '微軟正黑體'
+            color: white
+            font-weight: 300
+            font-size: 32px
+            line-height: 35px
+            border-left: 5px solid #e2545e
+            letter-spacing: 2px
+            margin-top: 18px
+            padding-left: 10px
+            padding-bottom: 6px
+    .dataInfo
+        margin-bottom: 8px
+        .dataSource
+            font-size: 17px
+            font-family: 'Noto Sans TC', '微軟正黑體'
+            color: #E2545E
+            font-weight: 200
+            letter-spacing: 1px
+            margin-right: 12px
+            i
+                padding-right: 5px
+        .dataDate
+            font-size: 17px
+            font-family: 'Noto Sans TC', '微軟正黑體'
+            color: #E2545E
+            font-weight: 200
+            i
+                padding-right: 5px
+    .dataIntro
+        color: rgb(226, 219, 219)
+        font-family: 'Noto Sans TC', '微軟正黑體'
+        font-weight: 200
+        letter-spacing: 1px
+        font-size: 14.5px
+        margin-bottom: 20px
+        p
+            margin-bottom: 3px
+    .graphWrapper
+        padding-bottom: 40px
+        img
+            width: 100%
+
+@media only screen and (max-width : 991px)
+    section.main
+        padding-left: $pagePadding992
+        padding-right: $pagePadding992
+        background-size: 3000px
+        .pathWrapper
+            padding-top: 15px
+            padding-bottom: 15px
+            margin-left: -$pagePadding992
+            margin-right: -$pagePadding992
+            padding: 12px 3vw
+            img
+                height: 20px
+                margin-right: 10px
+            span
+                font-size: 18px
+        .textContentWrapper
+            h1
+                font-size: 4.5vw
+                line-height: 5vw
+        .dataInfo
+            .dataSource
+                font-size: 2vw
+                i
+            .dataDate
+                font-size: 2vw
+                i
+        .dataIntro
+            font-size: 1.5vw
+            p
+        .graphWrapper
+            img
+@media only screen and (max-width : 767px)
+    section.main
+        padding-left: $pagePadding768
+        padding-right: $pagePadding768
+        background-size: 3000px
+        .pathWrapper
+            padding-top: 2vw
+            padding-bottom: 2vw
+            margin-left: -$pagePadding768
+            margin-right: -$pagePadding768
+            padding-left: $pagePadding768
+            img
+                height: 4.5vw
+                margin-right: 10px
+                margin-bottom: 1px
+            span
+                font-size: 4vw
+                font-weight: 400
+        .textContentWrapper
+            h1
+                font-size: 6.5vw
+                line-height: 7.5vw
+                padding-bottom: 0.5vw
+        .dataInfo
+            padding-bottom: 1vw
+            .dataSource
+                font-size: 4vw
+                display: block
+                font-weight: 400
+                margin-bottom: 0.5vw
+                i
+            .dataDate
+                font-size: 4vw
+                display: block
+                font-weight: 400
+                i
+        .dataIntro
+            font-size: 3.5vw
+            font-weight: 400
+            p
+                padding-bottom: 1.5vw
+        .graphWrapper
+            img
+/* Custom, iPhone Retina */
+/* 至少 320px 時，也就是大於 320px */
+// @media only screen and (min-width : 320px)
+
+/* Extra Small Devices, Phones */
+// @media only screen and (min-width : 480px)
+
+/* Small Devices, Tablets */
+// @media only screen and (min-width : 768px)
+
+/* Medium Devices, Desktops */
+// @media only screen and (min-width : 992px)
+
+/* Large Devices, Wide Screens */
+// @media only screen and (min-width : 1200px)
